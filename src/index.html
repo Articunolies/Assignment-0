@@ -2,6 +2,8 @@
 <html>
 <head>
    <meta charset="utf-8" />
+   <title>Derek Simpson: dejsimps@ucsc.edu</title>
+
 </head>
 <body onload="main()">
    <canvas id="asg0" width="400" height="400" style="border:1px solid #000;"></canvas>
@@ -26,14 +28,14 @@
 
    <label><strong>Operation:</strong></label>
    <select id="opt">
-      <option value="Add">Add (v1 + v2)</option>
-      <option value="Subtract">Subtract (v1 - v2)</option>
-      <option value="Multiply">Multiply (v1×s & v2×s)</option>
-      <option value="Divide">Divide (v1÷s & v2÷s)</option>
-      <option value="Mag">Magnitude</option>
-      <option value="Norm">Normalize</option>
-      <option value="Ang">Angle Between</option>
-      <option value="Area">Area of Triangle</option>
+      <option value="Add">Add</option>
+      <option value="Subtract">Subtract</option>
+      <option value="Multiply">Multiply</option>
+      <option value="Divide">Divide</option>
+      <option value="Angle Between">Angle Between</option>
+      <option value="Area">Area</option>
+      <option value="Magnitude">Magnitude</option>
+      <option value="Normalize">Normalize</option>
    </select>
 
    &nbsp;&nbsp;<label><strong>Scalar:</strong></label>
@@ -43,7 +45,7 @@
 
    <button onclick="handleDrawOperationEvent()">Compute & Draw Operation</button>
 
-   <!-- Libraries (keep order) -->
+   <!-- Libraries -->
    <script src="lib/webgl-utils.js"></script>
    <script src="lib/webgl-debug.js"></script>
    <script src="lib/cuon-utils.js"></script>

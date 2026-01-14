@@ -106,25 +106,25 @@ function handleDrawOperationEvent() {
         drawVector(v1s, "green");
         drawVector(v2s, "green");
     }
-    else if (op === "Mag") {
-        console.log(`Magnitude v1: ${v1.magnitude().toFixed(3)}`);
-        console.log(`Magnitude v2: ${v2.magnitude().toFixed(3)}`);
-    }
-    else if (op === "Norm") {
-        const v1n = new Vector3(v1.elements);
-        v1n.normalize();
-        const v2n = new Vector3(v2.elements);
-        v2n.normalize();
-        drawVector(v1n, "green");
-        drawVector(v2n, "green");
-    }
-    else if (op === "Ang") {
+    else if (op === "Angle Between") {
         const angle = angleBetween(v1, v2);
         console.log(`Angle between v1 and v2: ${angle.toFixed(2)}°`);
     }
     else if (op === "Area") {
         const area = areaTriangle(v1, v2);
         console.log(`Area of triangle: ${area.toFixed(3)}`);
+    }
+    else if (op === "Magnitude") {
+        console.log(`Magnitude v1: ${v1.magnitude().toFixed(3)}`);
+        console.log(`Magnitude v2: ${v2.magnitude().toFixed(3)}`);
+    }
+    else if (op === "Normalize") {
+        const v1n = new Vector3(v1.elements);
+        v1n.normalize();
+        const v2n = new Vector3(v2.elements);
+        v2n.normalize();
+        drawVector(v1n, "green");
+        drawVector(v2n, "green");
     }
 }
 
